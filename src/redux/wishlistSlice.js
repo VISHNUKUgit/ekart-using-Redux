@@ -20,8 +20,11 @@ const wishlist = createSlice({
         },
         removeFromCart:(state,action)=>{
             state.cart.splice(action.payload, 1)
+        },
+        placeOrder:(state)=>{
+            state.cart=[]
         }
     }
 })
-export const { addToWishlist,removeFromWishlist,addToCart,removeFromCart } = wishlist.actions;
+export const { addToWishlist,removeFromWishlist,addToCart,removeFromCart,placeOrder } = wishlist.actions;
 export default wishlist.reducer

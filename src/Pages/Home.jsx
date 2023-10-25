@@ -20,10 +20,12 @@ function Home() {
             <Card.Title>{product?.title}</Card.Title>
             <Card.Text>
               {product?.description.slice(0,50)}...
+              <br />
+              <span style={{fontWeight:'bold'}}>price:₹{product.price}</span>
             </Card.Text>
             <div className='d-flex justify-content-between'>
-              <Button variant="primary" onClick={()=>dispatch(addToWishlist(product))}  >add to wishlist</Button>
-              <Button variant="primary" onClick={()=>dispatch(addToCart(product))} >add to cart</Button>
+              <button variant="primary" style={{fontWeight:"800",padding:'0 2px',backgroundColor:'black',color:'white'}} onClick={()=>dispatch(addToWishlist(product))}  >add to wishlist</button>
+              <button variant="primary"style={{fontWeight:"800",padding:'0 2px',backgroundColor:'white',color:'Black', border:'1px solid black'}} onClick={()=>dispatch(addToCart(product))} >add to cart</button>
             </div>
 
           </Card.Body>
